@@ -8,7 +8,7 @@ const Schemas = mongoose.Schema({
    
      date:{
       // type: Date,
-      // default: Date
+      // require:true
    },  
    leader:{
       type: String,

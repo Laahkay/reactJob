@@ -1,7 +1,7 @@
 .form {
   text-align: center;
   max-width: 390px;
-  background: rgba(2, 91, 129, 0.406);
+  background: linear-gradient(135deg, rgba(255,0,0,.2), rgba(0,0,255,.2));
   /* background-image: url(https://c4.wallpaperflare.com/wallpaper/996/683/591/black-background-wood-wallpaper-preview.jpg) ; */
   background-size: cover;
   padding: 30px;
@@ -10,9 +10,11 @@
   overflow: hidden;
   position: relative;
   left:33%;
+  font-family: 'Bungee', cursive;
   font-style: italic;
   color: #000000;
   text-decoration: red;
+  display: block;
 }
 /*  */
 
@@ -105,11 +107,18 @@ label{
 	font-size:16px;
 	font-weight:bold;
 	padding:8px 18px;
-  background:linear-gradient(to right, #1bb48194 10%,#03091195 50%,#1d07afa7 80%);
+  background: linear-gradient(135deg, rgba(255,0,0,.2), rgba(0,0,255,.2));
 }
 ul {
   list-style-type: none;
   padding-left: 0px;
+  
+}
+li{
+  background-color: #ffffff;
+width: 50%;
+position: relative;
+left: 25%;
 }
 .back{
   background-color: whitesmoke;
@@ -119,7 +128,7 @@ ul {
 .forms{
   text-align: center;
   max-width: 390px;
-  background: rgba(2, 91, 129, 0.406);
+  background: linear-gradient(135deg, rgba(255,0,0,.2), rgba(0,0,255,.2));
   /* background-image: url(https://c4.wallpaperflare.com/wallpaper/996/683/591/black-background-wood-wallpaper-preview.jpg) ; */
   background-size: cover;
   padding: 30px;
@@ -128,6 +137,7 @@ ul {
   overflow: hidden;
   position: relative;
   left:33%;
+  font-family: 'Bungee', cursive;
   font-style: italic;
   color: #000000;
   text-decoration: red;
@@ -192,3 +202,18 @@ input[type="number"]::placeholder {
   text-align: center; 
   color: #00000073;
 } 
+.delete{
+  position: relative;
+  padding: 0.1em 1em;
+  background: linear-gradient(135deg, rgba(255,0,0,.2), rgba(0,0,255,.2));
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 1px 2px 2px rgba(255,0,255,.2);
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+  transition: all .2s linear;
+
+}

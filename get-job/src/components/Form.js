@@ -7,7 +7,10 @@ const Form = (props) => {
   const {Firstname,
   date,
   leader,
-  members,handleChange,handleSubmit
+  members,
+  handleChange,
+  handleSubmit,
+ 
   } = props
 
 

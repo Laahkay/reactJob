@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import Navbar from './Navbar'
+import Navbar from './Navbar';
+
 
 const Display = (props) => {
-  const { list,setList } = props
+  const { list,deleteParty } = props
   // console.log('list', list)
 const [num,setNum] = useState(0);
 const incF = () =>{
@@ -18,11 +19,7 @@ const decF = ()=>{
   setNum(0)
  }
 }
-const handleRemove =(item)=>{
-var newList = list;
-newList.splice(item,1);
-setList([...newList])
-}
+
   return (
     <div>
 <Navbar />
@@ -47,13 +44,11 @@ setList([...newList])
             <h5 className='ups'>{num}</h5>
             <div className='cart'>
             <button className='bts' onClick={incF}>+</button>
-            
-            
             <button className='btss' onClick={decF}>-</button>
             </div>
             <br/>
             <label>Remove from list</label><br/>
-             <button onClick={()=> handleRemove(index)}>+</button>
+             <button className='delete' onClick={()=> deleteParty(item._id)}>Delete</button>
           </ul>
         )
       })}</div>

@@ -36,6 +36,18 @@ const saveDetails = (app) => {
       console.log("error", error);
     }
   });
+  
+  app.delete('/deleteParty/:id' , async (req , res)  =>  {
+    try{
+        const {id} = req.params                    
+        const partyDelete = await Schemas.deleteOne({_id : id})
+        res.send({message: "Parliament Party Successfully deleted", partyDelete})
+    }catch(err){
+        console.log(err);
+        res.sendStatus(404)
+    }
+})
+  
 };
 
 module.exports = { saveDetails};

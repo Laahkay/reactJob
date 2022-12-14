@@ -66,6 +66,12 @@ const Main = () => {
       })
       .catch(() => {});
   };
+  const deleteParty = async (id) =>{
+  console.log("id",id)
+  let res = await  axios.delete(`http://localhost:7000/deleteParty/${id}`);
+    getDetails();
+    return res.data
+     }
 
   return (
     <div>
@@ -74,15 +80,17 @@ const Main = () => {
           path="/"
           exact
           element={
-            <Form handleChange={handleChange} handleSubmit={handleSubmit} />
+            <Form handleChange={handleChange} handleSubmit={handleSubmit} han />
           }
         />
 
         <Route
           path="/display"
-          element={<Display list={list} getDetails={getDetails} />}
+          element={<Display list={list} getDetails={getDetails} deleteParty={deleteParty} />}
         />
+        
       </Routes>
+      {/* <button onClick={()=> handleRemove(item.id)}>+</button> */}
     </div>
   );
 };
